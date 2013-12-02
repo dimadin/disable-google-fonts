@@ -11,10 +11,11 @@
 
 /**
  * Plugin Name: Disable Google Fonts
+ * Plugin URI:  http://blog.milandinic.com/wordpress/plugins/disable-google-fonts/
  * Description: Disable enqueuing of Open Sans and other fonts used by WordPress from Google.
  * Author:      Milan Dinić
  * Author URI:  http://blog.milandinic.com/
- * Version:     1.0-beta-1
+ * Version:     1.0
  * License:     GPL
  */
 
