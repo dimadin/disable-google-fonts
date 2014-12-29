@@ -15,7 +15,7 @@
  * Description: Disable enqueuing of Open Sans and other fonts used by WordPress from Google.
  * Author:      Milan Dinić
  * Author URI:  http://blog.milandinic.com/
- * Version:     1.0
+ * Version:     1.1
  * License:     GPL
  */
 
@@ -115,6 +115,66 @@ class Disable_Google_Fonts {
 	}
 
 	/**
+	 * Force 'off' as a result of Noto Sans font toggler string translation.
+	 *
+	 * @since 1.1
+	 * @access public
+	 *
+	 * @param  string $translations Translated text.
+	 * @param  string $text         Text to translate.
+	 * @param  string $context      Context information for the translators.
+	 * @param  string $domain       Text domain. Unique identifier for retrieving translated strings.
+	 * @return string $translations Translated text.
+	 */
+	public function disable_noto_sans( $translations, $text, $context, $domain ) {
+		if ( 'Noto Sans font: on or off' == $context && 'on' == $text ) {
+			$translations = 'off';
+		}
+
+		return $translations;
+	}
+
+	/**
+	 * Force 'off' as a result of Noto Serif font toggler string translation.
+	 *
+	 * @since 1.1
+	 * @access public
+	 *
+	 * @param  string $translations Translated text.
+	 * @param  string $text         Text to translate.
+	 * @param  string $context      Context information for the translators.
+	 * @param  string $domain       Text domain. Unique identifier for retrieving translated strings.
+	 * @return string $translations Translated text.
+	 */
+	public function disable_noto_serif( $translations, $text, $context, $domain ) {
+		if ( 'Noto Serif font: on or off' == $context && 'on' == $text ) {
+			$translations = 'off';
+		}
+
+		return $translations;
+	}
+
+	/**
+	 * Force 'off' as a result of Inconsolata font toggler string translation.
+	 *
+	 * @since 1.1
+	 * @access public
+	 *
+	 * @param  string $translations Translated text.
+	 * @param  string $text         Text to translate.
+	 * @param  string $context      Context information for the translators.
+	 * @param  string $domain       Text domain. Unique identifier for retrieving translated strings.
+	 * @return string $translations Translated text.
+	 */
+	public function disable_inconsolata( $translations, $text, $context, $domain ) {
+		if ( 'Inconsolata font: on or off' == $context && 'on' == $text ) {
+			$translations = 'off';
+		}
+
+		return $translations;
+	}
+
+	/**
 	 * Register filters that disable fonts for bundled themes.
 	 *
 	 * This filters can be directly hooked as Disable_Google_Fonts::disable_open_sans()
@@ -137,6 +197,11 @@ class Disable_Google_Fonts {
 		$template = get_template();
 
 		switch ( $template ) {
+			case 'twentyfifteen' :
+				add_filter( 'gettext_with_context', array( $this, 'disable_noto_sans'       ), 888, 4 );
+				add_filter( 'gettext_with_context', array( $this, 'disable_noto_serif'      ), 888, 4 );
+				add_filter( 'gettext_with_context', array( $this, 'disable_inconsolata'     ), 888, 4 );
+				break;
 			case 'twentyfourteen' :
 				add_filter( 'gettext_with_context', array( $this, 'disable_lato'            ), 888, 4 );
 				break;
