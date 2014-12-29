@@ -24,3 +24,9 @@ And it's on [GitHub](https://github.com/dimadin/disable-google-fonts).
 
 1. Upload `disable-google-fonts` folder to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
+
+== Changelog ==
+
+= 1.1 =
+* Released on 29th December 2014
+* Remove fonts used in Twenty Fifteen.
