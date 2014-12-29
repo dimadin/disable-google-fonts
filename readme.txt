@@ -3,7 +3,7 @@ Contributors: dimadin
 Donate link: http://blog.milandinic.com/donate/
 Tags: Open Sans, Google Fonts, Google Web Fonts
 Requires at least: 3.5
-Tested up to: 4.0
+Tested up to: 4.1
 Stable tag: 1.1
 
 Disable enqueuing of Open Sans and other fonts used by WordPress from Google.
