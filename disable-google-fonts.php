@@ -60,7 +60,7 @@ class Disable_Google_Fonts {
 		}
 
 		// Load translations
-		load_plugin_textdomain( 'better-serbian-search', false, dirname( $basename ) . '/languages' );
+		load_plugin_textdomain( 'disable-google-fonts', false, dirname( $basename ) . '/languages' );
 
 		// Add new links
 		$links['donate']   = '<a href="http://blog.milandinic.com/donate/">' . __( 'Donate', 'disable-google-fonts' ) . '</a>';
