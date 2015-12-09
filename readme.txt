@@ -3,7 +3,7 @@ Contributors: dimadin
 Donate link: http://blog.milandinic.com/donate/
 Tags: Open Sans, Google Fonts, Google Web Fonts
 Requires at least: 3.5
-Tested up to: 4.1
+Tested up to: 4.4
 Stable tag: 1.1
 
 Disable enqueuing of Open Sans and other fonts used by WordPress from Google.
@@ -12,7 +12,7 @@ Disable enqueuing of Open Sans and other fonts used by WordPress from Google.
 
 [Plugin homepage](http://blog.milandinic.com/wordpress/plugins/disable-google-fonts/) | [Plugin author](http://blog.milandinic.com/) | [Donate](http://blog.milandinic.com/donate/)
 
-This plugin stops loading of Open Sans and other fonts used by WordPress and bundled themes (Twenty Twelve, Twenty Thirteen, Twenty Fourteen, Twenty Fifteen) from Google Fonts.
+This plugin stops loading of Open Sans and other fonts used by WordPress and bundled themes (Twenty Twelve, Twenty Thirteen, Twenty Fourteen, Twenty Fifteen, Twenty Sixteen) from Google Fonts.
 
 Reasons for not using Google Fonts might be privacy and security, local development or production, blocking of Google's servers, characters not supported by font, performance.
 
@@ -26,6 +26,10 @@ And it's on [GitHub](https://github.com/dimadin/disable-google-fonts).
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Changelog ==
+
+= 1.2 =
+* Released on 9th December 2015
+* Remove fonts used in Twenty Sixteen.
 
 = 1.1 =
 * Released on 29th December 2014
