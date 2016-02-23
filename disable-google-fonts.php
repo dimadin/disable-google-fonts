@@ -35,9 +35,11 @@ class Disable_Google_Fonts {
 		add_filter( 'gettext_with_context', array( $this, 'disable_open_sans'             ), 888, 4 );
 		add_action( 'after_setup_theme',    array( $this, 'register_theme_fonts_disabler' ), 1      );
 
-		// Register plugins action links filter
-		add_filter( 'plugin_action_links',               array( $this, 'action_links' ), 10, 2 );
-		add_filter( 'network_admin_plugin_action_links', array( $this, 'action_links' ), 10, 2 );
+		if ( is_admin() ) {
+			// Register plugins action links filter
+			add_filter( 'plugin_action_links',               array( $this, 'action_links' ), 10, 2 );
+			add_filter( 'network_admin_plugin_action_links', array( $this, 'action_links' ), 10, 2 );
+		}
 	}
 
 	/**
