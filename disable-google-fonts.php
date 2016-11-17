@@ -251,6 +251,26 @@ class Disable_Google_Fonts {
 	}
 
 	/**
+	 * Force 'off' as a result of Libre Franklin font toggler string translation.
+	 *
+	 * @since 1.3
+	 * @access public
+	 *
+	 * @param  string $translations Translated text.
+	 * @param  string $text         Text to translate.
+	 * @param  string $context      Context information for the translators.
+	 * @param  string $domain       Text domain. Unique identifier for retrieving translated strings.
+	 * @return string $translations Translated text.
+	 */
+	public function disable_libre_franklin( $translations, $text, $context, $domain ) {
+		if ( 'Libre Franklin font: on or off' == $context && 'on' == $text ) {
+			$translations = 'off';
+		}
+
+		return $translations;
+	}
+
+	/**
 	 * Register filters that disable fonts for bundled themes.
 	 *
 	 * This filters can be directly hooked as Disable_Google_Fonts::disable_open_sans()
@@ -273,6 +293,9 @@ class Disable_Google_Fonts {
 		$template = get_template();
 
 		switch ( $template ) {
+			case 'twentyseventeen' :
+				add_filter( 'gettext_with_context', array( $this, 'disable_libre_franklin'  ), 888, 4 );
+				break;
 			case 'twentysixteen' :
 				add_filter( 'gettext_with_context', array( $this, 'disable_merriweather'    ), 888, 4 );
 				add_filter( 'gettext_with_context', array( $this, 'disable_montserrat'      ), 888, 4 );
