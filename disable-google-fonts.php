@@ -34,38 +34,21 @@ class Disable_Google_Fonts {
 	public function __construct() {
 		add_filter( 'gettext_with_context', array( $this, 'disable_open_sans'             ), 888, 4 );
 		add_action( 'after_setup_theme',    array( $this, 'register_theme_fonts_disabler' ), 1      );
-
-		// Register plugins action links filter
-		add_filter( 'plugin_action_links',               array( $this, 'action_links' ), 10, 2 );
-		add_filter( 'network_admin_plugin_action_links', array( $this, 'action_links' ), 10, 2 );
 	}
 
 	/**
 	 * Add action links to plugins page.
 	 *
 	 * @since 1.2
+	 * @deprecated 1.3
 	 * @access public
 	 *
-	 * @param array  $links       Existing plugin's action links.
+	 * @param array  $links       Plugin's action links.
 	 * @param string $plugin_file Path to the plugin file.
-	 * @return array $links New plugin's action links.
+	 * @return array $links Plugin's action links.
 	 */
 	public function action_links( $links, $plugin_file ) {
-		// Set basename
-		$basename = plugin_basename( __FILE__ );
-
-		// Check if it is for this plugin
-		if ( $basename != $plugin_file ) {
-			return $links;
-		}
-
-		// Load translations
-		load_plugin_textdomain( 'disable-google-fonts', false, dirname( $basename ) . '/languages' );
-
-		// Add new links
-		$links['donate']   = '<a href="http://blog.milandinic.com/donate/">' . __( 'Donate', 'disable-google-fonts' ) . '</a>';
-		$links['wpdev']    = '<a href="http://blog.milandinic.com/wordpress/custom-development/">' . __( 'WordPress Developer', 'disable-google-fonts' ) . '</a>';
-		$links['premiums'] = '<strong><a href="https://shop.milandinic.com/">' . __( 'Premium WordPress Plugins', 'disable-google-fonts' ) . '</a></strong>';
+		_deprecated_function( __METHOD__, '1.3' );
 
 		return $links;
 	}
