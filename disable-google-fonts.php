@@ -15,7 +15,7 @@
  * Description: Disable enqueuing of Open Sans and other fonts used by WordPress from Google.
  * Author:      Milan Dinić
  * Author URI:  http://blog.milandinic.com/
- * Version:     1.2
+ * Version:     1.3
  * Text Domain: disable-google-fonts
  * Domain Path: /languages/
  * License:     GPL
