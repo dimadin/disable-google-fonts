@@ -17,6 +17,7 @@
 		"source": "https://github.com/dimadin/disable-google-fonts"
 	},
 	"require": {
+		"php": ">=5.2.4",
 		"composer/installers": "~1.0"
 	}
 }
