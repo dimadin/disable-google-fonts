@@ -3,13 +3,13 @@
 	"description": "Disable enqueuing of Open Sans and other fonts used by WordPress from Google.",
 	"keywords": ["google fonts"],
 	"type": "wordpress-plugin",
-	"homepage": "http://blog.milandinic.com/wordpress/plugins/disable-google-fonts/",
+	"homepage": "https://milandinic.com/wordpress/plugins/disable-google-fonts/",
 	"license": "GPL-2.0-or-later",
 	"authors": [
 		{
 			"name": "Milan Dinić",
 			"email": "milan@srpski.biz",
-			"homepage": "http://blog.milandinic.com/"
+			"homepage": "https://milandinic.com/"
 		}
 	],
 	"support": {
