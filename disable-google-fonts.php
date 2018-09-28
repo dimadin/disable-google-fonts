@@ -33,6 +33,7 @@ class Disable_Google_Fonts {
 	 */
 	public function __construct() {
 		add_filter( 'gettext_with_context', array( $this, 'disable_open_sans'             ), 888, 4 );
+		add_filter( 'gettext_with_context', array( $this, 'disable_noto_serif'            ), 888, 4 );
 		add_action( 'after_setup_theme',    array( $this, 'register_theme_fonts_disabler' ), 1      );
 	}
 
