@@ -15,7 +15,7 @@
  * Description: Disable enqueuing of fonts from Google used by WordPress core, default themes, Gutenberg, and many more.
  * Author:      Milan Dinić
  * Author URI:  https://milandinic.com/
- * Version:     1.4
+ * Version:     2.0
  * Text Domain: disable-google-fonts
  * Domain Path: /languages/
  * License:     GPL
