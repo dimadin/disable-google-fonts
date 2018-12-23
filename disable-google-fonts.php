@@ -3,7 +3,7 @@
 /**
  * The Disable Google Fonts Plugin
  *
- * Disable enqueuing of Open Sans and other fonts used by WordPress from Google.
+ * Disable enqueuing of fonts from Google by WordPress core, default themes, Gutenberg, and many more
  *
  * @package Disable_Google_Fonts
  * @subpackage Main
@@ -12,7 +12,7 @@
 /**
  * Plugin Name: Disable Google Fonts
  * Plugin URI:  https://milandinic.com/wordpress/plugins/disable-google-fonts/
- * Description: Disable enqueuing of Open Sans and other fonts used by WordPress from Google.
+ * Description: Disable enqueuing of fonts from Google used by WordPress core, default themes, Gutenberg, and many more.
  * Author:      Milan Dinić
  * Author URI:  https://milandinic.com/
  * Version:     1.4
